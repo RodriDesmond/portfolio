@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% load static %} {% block content %}
+<div id='app'>
+    <ul class="list-group" v-for="t in trabajos">
+        <li class="list-group-item">[[t.trabajo]] $[[t.precio]]</li>
+    </ul>
+</div>
+
+<script src="{% static '/apps/presupuesto.js' %} "></script>
+{% endblock %}
