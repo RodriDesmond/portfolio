@@ -17,8 +17,7 @@
 }
 * {
     transition: all 0.3s;
-    font-family: 'Urbanist', sans-serif;
-    
+    font-family: 'Urbanist', sans-serif;    
 }
 
 .myimage {
@@ -40,10 +39,11 @@
     background-color: var(--bg);
 }
 .carousel .carousel-item {
-    width: 45rem !important;
+    width: 30rem !important;
+    height: 100%;
     text-decoration: none;
+    color: var(--bg);
 }
-
 .myhighlight {
     border-radius: 5px;
     font-size: 13px;
