@@ -4,5 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems2 = document.querySelectorAll('.parallax');
     var instances2 = M.Parallax.init(elems2);
     var elems3 = document.querySelectorAll('.carousel');
-    var instances3 = M.Carousel.init(elems3);
+    var instances3 = M.Carousel.init(elems3,{
+        duration:50,
+        indicators:true
+    });
 });

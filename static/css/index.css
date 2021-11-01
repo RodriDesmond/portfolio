@@ -9,15 +9,22 @@
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+
+:root {
+    --bg: #276678;
+    --txt: #F6F5F5;
+    --txt-hvr: #D3E0EA;
+}
 * {
     transition: all 0.3s;
     font-family: 'Urbanist', sans-serif;
+    
 }
 
 .myimage {
     height: 300px;
     border-radius: 50% !important;
-    margin: 15px;
+    margin: 5px;
 }
 
 .aboutmeh3 {
@@ -29,11 +36,12 @@
     margin: 0px !important;
     letter-spacing: 1px;
 }
-
-
-
+.white-text.myhighlight{
+    background-color: var(--bg);
+}
 .carousel .carousel-item {
-    width: 400px !important;
+    width: 45rem !important;
+    text-decoration: none;
 }
 
 .myhighlight {
@@ -69,21 +77,21 @@
     text-justify: inter-word !important;
 }
 
-.icono {
-    color: teal !important;
+.progress .determinate{
+    background: var(--bg);
 }
 
 @media only screen and (max-width: 992px) {}
 
 @media only screen and (max-width: 600px) {
     .myimage {
-        height: 100px;
+        height: 200px;
     }
     .aboutmeh3 {
         font-size: 30px;
     }
     .aboutme {
-        text-align: justify !important;
+        text-align:left !important;
         text-justify: auto !important;
     }
 }

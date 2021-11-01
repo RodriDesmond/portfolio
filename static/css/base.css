@@ -13,6 +13,11 @@
     transition: all 0.3s;
     font-family: 'Urbanist', sans-serif;
 }
+:root {
+    --nav-bg: #276678;
+    --nav-txt: #F6F5F5;
+    --nav-txt-hvr: #D3E0EA;
+}
 
 html {
     scroll-padding-top: 60px;
@@ -21,13 +26,32 @@ html {
 
 nav ul a,
 nav .brand-logo {
-    color: #26a69a;
+    color: var(--nav-txt);
     text-decoration: none;
 }
 
-.sidenav-trigger {
-    color: #26a69a;
+nav ul a:hover {
+    color: var(--nav-txt);
 }
+
+.sidenav-trigger {
+    color: var(--nav-txt);
+    text-decoration: none;
+}
+
+.sidenav li a {
+    color: var(--nav-txt);
+    background-color: var(--nav-bg);
+    text-decoration: none;
+}
+.sidenav li {
+    background-color: var(--nav-bg);
+}
+
 .blue.darken-3 {
-    background-color:teal !important;
+    background-color:var(--nav-bg) !important;
+}
+
+.page-footer{
+    background-color: var(--nav-bg);
 }
