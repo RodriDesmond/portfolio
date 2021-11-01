@@ -14,16 +14,6 @@
     font-family: 'Urbanist', sans-serif;
 }
 
-html {
-    scroll-padding-top: 60px;
-    /* height of sticky header */
-}
-
-nav ul a,
-nav .brand-logo {
-    color: #444;
-}
-
 .myimage {
     height: 300px;
     border-radius: 50% !important;
@@ -40,13 +30,7 @@ nav .brand-logo {
     letter-spacing: 1px;
 }
 
-p {
-    line-height: 2rem;
-}
 
-.sidenav-trigger {
-    color: #26a69a;
-}
 
 .carousel .carousel-item {
     width: 400px !important;

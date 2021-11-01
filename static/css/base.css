@@ -1,0 +1,33 @@
+/* Custom Stylesheet */
+
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+* {
+    transition: all 0.3s;
+    font-family: 'Urbanist', sans-serif;
+}
+
+html {
+    scroll-padding-top: 60px;
+    /* height of sticky header */
+}
+
+nav ul a,
+nav .brand-logo {
+    color: #26a69a;
+    text-decoration: none;
+}
+
+.sidenav-trigger {
+    color: #26a69a;
+}
+.blue.darken-3 {
+    background-color:teal !important;
+}
