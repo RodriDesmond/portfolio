@@ -1,19 +1,9 @@
 {% extends 'base.html' %}{% load static %} {% block content %}
-
-
-<!--
 <div id='app'>
     <ul class="list-group" v-for="t in trabajos">
         <li class="list-group-item">[[t.trabajo]] $[[t.precio]]</li>
     </ul>
 </div>
--->
-<div class="container section">
-    <p style="color:white;">Servicios.</p>
-    <p style="color:white;">Calcular presupuesto.</p>
-    
-    <h1 style="color:white;">Seccion en progreso.</h1>
-    <h2 style="color:white;">La Escondida, Chaco - Argentina</h2>
-</div>
+
 <script src="{% static '/apps/presupuesto.js' %} "></script>
 {% endblock %}
