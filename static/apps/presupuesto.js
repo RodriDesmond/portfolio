@@ -4,9 +4,14 @@ var app = new Vue({
     data() {
         return {
             trabajos: [],
+            counter:0,
+            item:"",
+            cant : 0,
+            items :0,
         }
     },
     methods: {
+        
         getTrabajos() {
             fetch(`/api/trabajos`)
                 .then(response => response.json())
@@ -19,5 +24,5 @@ var app = new Vue({
     created() {
         this.getTrabajos()
         console.log('Pagina Cargada')
-    }
+    },    
 });

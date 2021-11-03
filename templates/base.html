@@ -6,6 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="{% static 'favicon.ico'%}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'icono/apple-touch-icon.png' %}">
+    <link rel="manifest" href="{% static 'icono/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'icono/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{% static 'icono/browserconfig.xml' %}">
+    <meta name="theme-color" content="#EEEEEE">
 
     <title>Rodrigo Costa</title>
 
@@ -80,7 +86,7 @@
                     <div class="col">
                         <a class="waves-effect waves-light btn" href="#trabajos">Projects</a>
                         <a class="waves-effect waves-light btn" href="#contacto">Contact</a>
-                        <a class="waves-effect waves-light btn disabled" href="{% url 'servicio_tecnico:presupuesto' %}">Servicio IT</a>
+                        <a class="waves-effect waves-light btn" href="{% url 'servicio_tecnico:presupuesto' %}">Servicio IT</a>
                     </div>
                 </div>
                 <br><br>

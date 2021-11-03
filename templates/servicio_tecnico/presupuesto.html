@@ -1,19 +1,72 @@
 {% extends 'base.html' %}{% load static %} {% block content %}
 
+<link href="{% static '/css/presupuesto.css'%}" type="text/css" rel="stylesheet" media="screen,projection" />
 
-<!--
-<div id='app'>
-    <ul class="list-group" v-for="t in trabajos">
-        <li class="list-group-item">[[t.trabajo]] $[[t.precio]]</li>
-    </ul>
+<div id="app">
+    <div class="container section">
+        <div class="row center">
+            <div class="col s12 m6 l3">
+                <h2 style="color:var(--bg)">Servicio Base</h2>
+                <table style="color: #EEEEEE; text-align: left;">
+                    <thead>
+                        <tr>
+                            <th>Trabajo</th>
+                            <th>Valor</th>
+                            <th>Cantidad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(t,i) in trabajos" v-if="t.categoria === 'Servicio Tecnico'" :key="i">
+                            <td>[[t.trabajo]]</td>
+                            <td>$[[t.precio]]</td>
+                            <td :name="'cant-'+i"><input :value="cant" type="value" :name="'cant-'+i" :id="'cant-'+i">
+                            </td>
+                            <td><input v-on:click="counter = parseFloat(counter) + parseFloat(t.precio)"
+                                    class="waves-effect waves-light btn" value="Agregar" type="button"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="col s12 m6 l3">
+                <h2 style="color:var(--bg)">Hardware</h2>
+                <table style="color: #EEEEEE; text-align: left;">
+                    <thead>
+                        <tr>
+                            <th>Trabajo</th>
+                            <th>Valor</th>
+                            <th>Cantidad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(t,i) in trabajos" v-if="t.categoria === 'Hardware'" :key="i">
+                            <td>[[t.trabajo]]</td>
+                            <td>$[[t.precio]]</td>
+                            <td :name="'cant-'+i"><input @change="cant.value() += cant.value(), counter = parseFloat(counter) + parseFloat(t.precio) * parseFloat(cant), item = t.trabajo" :value="cant" type="value" :name="'cant-'+i" :id="'cant-'+i">
+                            </td>
+                            <td>
+                                <input v-on:click="counter = parseFloat(counter) + parseFloat(t.precio) * parseFloat(items), item = t.trabajo"
+                                        class="waves-effect waves-light btn" value="Agregar" type="button">
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container section">
+        <p style="color: white">Presupuesto: [[item]] x [[cant]] $[[counter]]</p>
+    </div>
 </div>
--->
+
+
 <div class="container section">
-    <p style="color:white;">Servicios.</p>
-    <p style="color:white;">Calcular presupuesto.</p>
-    
-    <h1 style="color:white;">Seccion en progreso.</h1>
-    <h2 style="color:white;">La Escondida, Chaco - Argentina</h2>
+
+    <h1 style="color: red">Seccion en progreso.</h1>
+    <h2 style="color: white">La Escondida, Chaco - Argentina</h2>
 </div>
 <script src="{% static '/apps/presupuesto.js' %} "></script>
 {% endblock %}

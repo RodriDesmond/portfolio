@@ -17,7 +17,7 @@ class Categoria(BaseModel):
 class Jobs(BaseModel):
     categoria = models.ForeignKey(Categoria, related_name='categoria',on_delete=models.CASCADE)
     nombre = models.CharField(max_length=150,null=False)
-    valor = models.DecimalField(max_digits=5,decimal_places=2,default=0)
+    valor = models.DecimalField(max_digits=6,decimal_places=2,default=0)
 
     def __str__(self):
         return self.nombre

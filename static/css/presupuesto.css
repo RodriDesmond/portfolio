@@ -1,0 +1,57 @@
+/* Custom Stylesheet */
+
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+
+ :root {
+     --black:#222831;
+     --dark:#393E46;
+     --bg: #FFD369;
+     --txt: #EEEEEE;
+     --txt-hvr: #D3E0EA;
+ }
+ * {
+     transition: all 0.3s;
+     font-family: 'Urbanist', sans-serif;    
+ }
+
+ a.btn{
+     appearance: none;
+     background-color: var(--bg);
+     color: var(--dark);
+     border-radius: .40rem;
+ }
+ 
+ a.btn:hover{
+     background-color: var(--dark);
+     color: var(--txt-hvr);
+ }
+
+ td input{
+    appearance: none;
+    background-color: var(--bg);
+    color: var(--black);
+    border-radius: .40rem;
+ }
+
+ td input.waves-effect.waves-light.btn{
+    appearance: none;
+    background-color: var(--bg);
+    color: var(--black);
+    border-radius: .40rem;
+ }
+
+ a{
+     text-decoration: none;
+     color: var(--bg);
+ }
+ p{
+     color:var(--txt);
+ }
