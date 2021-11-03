@@ -12,5 +12,5 @@ urlpatterns = [
     path('', home, name='home'),
     path('api/trabajos',trabajos,name="trabajos"),
     path('servicio_tecnico/presupuesto',presupuesto,name="presupuesto"),
-    re_path(r'^favicon\.ico$', favicon_view),
+    path('favicon.ico', RedirectView.as_view(url=('/static/img/favicon.ico')))
 ]

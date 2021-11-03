@@ -6,7 +6,7 @@ DEBUG = True
 SECRET_KEY = os.environ.get('SECRET_KEY', "default_value")
 
 # SECURITY WARNING: update this when you have the production host
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://rodrigo-costa.herokuapp.com/']
 
 DATABASES = {
     'default': {
