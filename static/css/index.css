@@ -11,8 +11,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
 
 :root {
-    --bg: #276678;
-    --txt: #F6F5F5;
+    --black:#222831;
+    --dark:#393E46;
+    --bg: #FFD369;
+    --txt: #EEEEEE;
     --txt-hvr: #D3E0EA;
 }
 * {
@@ -23,7 +25,7 @@
 .myimage {
     height: 300px;
     border-radius: 50% !important;
-    margin: 5px;
+    margin: 10px;
 }
 
 .aboutmeh3 {
@@ -38,50 +40,96 @@
 .white-text.myhighlight{
     background-color: var(--bg);
 }
-.carousel .carousel-item {
-    width: 30rem !important;
-    height: 100%;
-    text-decoration: none;
-    color: var(--bg);
+
+.card{ 
+    border-radius: .40rem;
+    background-color: var(--dark);
+    min-height: 20vh;
 }
+.slider .indicators .indicator-item {
+    background-color: var(--bg);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  .slider .indicators .indicator-item.active {
+    background-color: var(--dark);
+  }
+
+a.btn{
+    appearance: none;
+    background-color: var(--bg);
+    color: var(--dark);
+    border-radius: .40rem;
+}
+
+a.btn:hover{
+    background-color: var(--dark);
+    color: var(--txt-hvr);
+}
+
 .myhighlight {
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 1px;
+    background-color: var(--bg);
+    color: var(--dark);
 }
 
 .mytitle {
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
+    color: var(--txt);
 }
 
 .mysubtitle {
     font-weight: bold;
     letter-spacing: 1px;
+    color: var(--txt);
 }
 
 .mysubtitle2 {
     letter-spacing: 1px;
+    color: var(--txt);
 }
 
 .mycontact {
     margin-bottom: 0px;
     font-size: 19px;
     text-decoration: underline;
+    color: var(--txt);
+}
+
+.card-panel.hoverable{
+    background-color: var(--dark);
+    min-height: 15vh;
 }
 
 .aboutme {
     font-size: 19px;
     text-align: justify !important;
     text-justify: inter-word !important;
+    color: var(--txt);
 }
 
 .progress .determinate{
     background: var(--bg);
 }
 
+span{
+    color:var(--txt);
+}
+
+a{
+    text-decoration: none;
+    color: var(--bg);
+}
+p{
+    color:var(--txt);
+}
 @media only screen and (max-width: 992px) {}
+
 
 @media only screen and (max-width: 600px) {
     .myimage {
@@ -89,13 +137,11 @@
     }
     .aboutmeh3 {
         font-size: 30px;
+        color: var(--txt);
     }
     .aboutme {
         text-align:left !important;
         text-justify: auto !important;
+        color: var(--txt);
     }
-}
-
-footer.page-footer {
-    margin: 0;
 }

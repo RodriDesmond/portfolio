@@ -14,8 +14,9 @@
     font-family: 'Urbanist', sans-serif;
 }
 :root {
-    --nav-bg: #276678;
-    --nav-txt: #F6F5F5;
+    --black: #222831;
+    --nav-bg: #FFD369;
+    --nav-txt: #EEEEEE;
     --nav-txt-hvr: #D3E0EA;
 }
 
@@ -23,7 +24,6 @@ html {
     scroll-padding-top: 60px;
     /* height of sticky header */
 }
-
 nav ul a,
 nav .brand-logo {
     color: var(--nav-txt);
@@ -38,20 +38,15 @@ nav ul a:hover {
     color: var(--nav-txt);
     text-decoration: none;
 }
-
-.sidenav li a {
-    color: var(--nav-txt);
+ul#mobile-demo.sidenav  {
+    background-color: var(--nav-bg);
+}
+ul.sidenav li a {
+    color: var(--nav-dark);
     background-color: var(--nav-bg);
     text-decoration: none;
 }
-.sidenav li {
-    background-color: var(--nav-bg);
-}
 
 .blue.darken-3 {
-    background-color:var(--nav-bg) !important;
-}
-
-.page-footer{
-    background-color: var(--nav-bg);
+    background-color:var(--black) !important;
 }
