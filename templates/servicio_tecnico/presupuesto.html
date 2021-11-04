@@ -4,61 +4,59 @@
 
 <div id="app">
     <div class="container section">
-        <div class="row center">
-            <div class="col s12">
-                <h2 style="color:var(--bg)">Servicio Base</h2>
-                <table style="color: #EEEEEE; text-align: left;">
-                    <thead>
-                        <tr>
-                            <th>Trabajo</th>
-                            <th>Valor</th>
-                            <th>Cantidad</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(t,i) in trabajos" v-if="t.categoria === 'Servicio Tecnico'" :key="i">
-                            <td>[[t.trabajo]]</td>
-                            <td :id="'precio-'+i" :value="t.precio">$[[t.precio]]</td>
-                            <td>
-                                <input v-model="t.cant" type="number" :name="'cant-'+i" :id="'cant-'+i"
-                                    style="max-width: 3rem; color: var(--txt);" min="0">
-                            </td>
-                            <td>
-                                <input v-on:click="counter = counter + parseFloat(t.cant) * parseFloat(t.precio)"
-                                    class="waves-effect waves-light btn" value="Agregar" type="button">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col s12">
-                <h2 style="color:var(--bg)">Hardware</h2>
-                <table style="color: #EEEEEE; text-align: left;">
-                    <thead>
-                        <tr>
-                            <th>Trabajo</th>
-                            <th>Valor</th>
-                            <th>Cantidad</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(t,i) in trabajos" v-if="t.categoria === 'Hardware'" :key="i">
-                            <td :id="'item-'+i">[[t.trabajo]]</td>
-                            <td :id="'precio-'+i" :value="t.precio">$[[t.precio]]</td>
-                            <td>
-                                <input v-model="t.cant" type="number" :name="'cant-'+i" :id="'cant-'+i"
-                                    style="max-width: 5rem;">
-                            </td>
-                            <td>
-                                <input @click="counter = counter + parseFloat(t.cant) * parseFloat(t.precio)"
-                                    class="waves-effect waves-light btn" value="Agregar" type="button">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="col s12">
+            <h2 style="color:var(--bg)">Servicio Base</h2>
+            <table style="color: #EEEEEE; text-align: left;">
+                <thead>
+                    <tr>
+                        <th>Trabajo</th>
+                        <th>Valor</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(t,i) in trabajos" v-if="t.categoria === 'Servicio Tecnico'" :key="i">
+                        <td style="max-width: 10rem;">[[t.trabajo]]</td>
+                        <td>$[[t.precio]]</td>
+                        <td>
+                            <input v-model="t.cant" type="number" :name="'cant-'+i" :id="'cant-'+i"
+                                style="max-width: 3rem; color: var(--txt);" min="0">
+                        </td>
+                        <td>
+                            <input v-on:click="counter = counter + parseFloat(t.cant) * parseFloat(t.precio)"
+                                class="waves-effect waves-light btn" value="Agregar" type="button">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col s12">
+            <h2 style="color:var(--bg)">Hardware</h2>
+            <table style="color: #EEEEEE; text-align: left;">
+                <thead>
+                    <tr>
+                        <th>Trabajo</th>
+                        <th>Valor</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(t,i) in trabajos" v-if="t.categoria === 'Hardware'" :key="i">
+                        <td style="max-width: 10rem;">[[t.trabajo]]</td>
+                        <td>$ [[t.precio]]</td>
+                        <td>
+                            <input v-model="t.cant" type="number" :name="'cant-'+i" :id="'cant-'+i"
+                                style="max-width: 3rem; color: var(--txt);" min="0">
+                        </td>
+                        <td>
+                            <input @click="counter = counter + parseFloat(t.cant) * parseFloat(t.precio)"
+                                class="waves-effect waves-light btn" value="Agregar" type="button">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <div class="container section" style="text-align: left;">
