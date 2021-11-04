@@ -1,7 +1,28 @@
 {% extends 'base.html' %}{% load static %} {% block content %}
 
 <link href="{% static '/css/presupuesto.css'%}" type="text/css" rel="stylesheet" media="screen,projection" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+        <h3 class="header" style="color: red;">Esta Secccion Esta en Construccion</h3>
+        <ul class="collection">
+            <li class="collection-item avatar">
+                <img src="{% static 'img/profile.jpg'%}" alt class="circle">
+                <span class='title'>Servicio Tecnico</span>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">textsms</i>
+                <span class='title'>WhatsApp: 3644 725019</span>
+            </li>
+        </ul>
+        <p style="color: var(--dark);">La Escondida, Chaco - </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat center">Cerrar</a>
+    </div>
+</div>
 <div id="app">
     <div class="container section">
         <div class="col s12">
