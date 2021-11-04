@@ -5,7 +5,7 @@
 <div id="app">
     <div class="container section">
         <div class="row center">
-            <div class="col s12 m6 l3">
+            <div class="col s12">
                 <h2 style="color:var(--bg)">Servicio Base</h2>
                 <table style="color: #EEEEEE; text-align: left;">
                     <thead>
@@ -19,17 +19,20 @@
                     <tbody>
                         <tr v-for="(t,i) in trabajos" v-if="t.categoria === 'Servicio Tecnico'" :key="i">
                             <td>[[t.trabajo]]</td>
-                            <td>$[[t.precio]]</td>
-                            <td :name="'cant-'+i"><input :value="cant" type="value" :name="'cant-'+i" :id="'cant-'+i">
+                            <td :id="'precio-'+i" :value="t.precio">$[[t.precio]]</td>
+                            <td>
+                                <input v-model="t.cant" type="number" :name="'cant-'+i" :id="'cant-'+i"
+                                    style="max-width: 3rem; color: var(--txt);" min="0">
                             </td>
-                            <td><input v-on:click="counter = parseFloat(counter) + parseFloat(t.precio)"
-                                    class="waves-effect waves-light btn" value="Agregar" type="button"></td>
+                            <td>
+                                <input v-on:click="counter = counter + parseFloat(t.cant) * parseFloat(t.precio)"
+                                    class="waves-effect waves-light btn" value="Agregar" type="button">
+                            </td>
                         </tr>
                     </tbody>
-
                 </table>
             </div>
-            <div class="col s12 m6 l3">
+            <div class="col s12">
                 <h2 style="color:var(--bg)">Hardware</h2>
                 <table style="color: #EEEEEE; text-align: left;">
                     <thead>
@@ -42,29 +45,39 @@
                     </thead>
                     <tbody>
                         <tr v-for="(t,i) in trabajos" v-if="t.categoria === 'Hardware'" :key="i">
-                            <td>[[t.trabajo]]</td>
-                            <td>$[[t.precio]]</td>
-                            <td :name="'cant-'+i"><input @change="cant.value() += cant.value(), counter = parseFloat(counter) + parseFloat(t.precio) * parseFloat(cant), item = t.trabajo" :value="cant" type="value" :name="'cant-'+i" :id="'cant-'+i">
+                            <td :id="'item-'+i">[[t.trabajo]]</td>
+                            <td :id="'precio-'+i" :value="t.precio">$[[t.precio]]</td>
+                            <td>
+                                <input v-model="t.cant" type="number" :name="'cant-'+i" :id="'cant-'+i"
+                                    style="max-width: 5rem;">
                             </td>
                             <td>
-                                <input v-on:click="counter = parseFloat(counter) + parseFloat(t.precio) * parseFloat(items), item = t.trabajo"
-                                        class="waves-effect waves-light btn" value="Agregar" type="button">
+                                <input @click="counter = counter + parseFloat(t.cant) * parseFloat(t.precio)"
+                                    class="waves-effect waves-light btn" value="Agregar" type="button">
                             </td>
                         </tr>
                     </tbody>
-
                 </table>
             </div>
         </div>
     </div>
-    <div class="container section">
-        <p style="color: white">Presupuesto: [[item]] x [[cant]] $[[counter]]</p>
+    <div class="container section" style="text-align: left;">
+        <div class="col s12">
+            <ul v-for="index in trabajos">
+                <li v-show="index.cant > 0">
+                    <h4 style="color: white">[[index.trabajo]]</h4>
+                    <p> Cantidad: [[index.cant]] = $ [[sub = parseFloat(index.cant)
+                        * parseFloat(index.precio)]]</p>
+                </li>
+            </ul>
+        </div>
     </div>
+    <h2 style="color: white">Presupuesto: $[[counter]]</h2>
+    <input v-on:click="counter = 0" class="waves-effect waves-light btn red" value="Resetear" type="button">
+    <input v-on:click="counter = 0" class="waves-effect waves-light btn" value="Generar" type="button">
 </div>
 
-
 <div class="container section">
-
     <h1 style="color: red">Seccion en progreso.</h1>
     <h2 style="color: white">La Escondida, Chaco - Argentina</h2>
 </div>

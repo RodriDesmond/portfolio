@@ -41,13 +41,16 @@
     border-radius: .40rem;
  }
 
- td input.waves-effect.waves-light.btn{
+ .waves-effect.waves-light.btn{
     appearance: none;
     background-color: var(--bg);
     color: var(--black);
     border-radius: .40rem;
  }
-
+ .waves-effect.waves-light.btn:hover{    
+    background-color: var(--dark);
+    color: var(--txt-hvr);
+ }
  a{
      text-decoration: none;
      color: var(--bg);
