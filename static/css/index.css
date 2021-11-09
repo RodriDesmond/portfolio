@@ -9,17 +9,28 @@
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
-
 :root {
-    --black:#222831;
-    --dark:#393E46;
+    --black: #222831;
+    --dark: #393E46;
     --bg: #FFD369;
     --txt: #EEEEEE;
     --txt-hvr: #D3E0EA;
 }
+
 * {
     transition: all 0.3s;
-    font-family: 'Urbanist', sans-serif;    
+    font-family: 'Urbanist', sans-serif;
+}
+
+.container {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container .row {
+    margin: 0 auto;
 }
 
 .myimage {
@@ -33,37 +44,71 @@
     letter-spacing: 1px;
 }
 
+.caption .title {
+    margin: 7px 0;
+    margin-top: 0;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
+    color: var(--bg);
+    z-index: -1;
+}
+
+.caption .subtitle {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
+    color: var(--txt);
+    display: inline;
+}
+
 .titulos {
     margin: 0px !important;
     letter-spacing: 1px;
 }
-.white-text.myhighlight{
+
+.white-text.myhighlight {
     background-color: var(--bg);
 }
 
-.card{ 
+.card {
     border-radius: .40rem;
     background-color: var(--dark);
     min-height: 20vh;
 }
+
+.card.horizontal {
+    border-radius: .40rem;
+    background-color: rgba(57, 62, 70, 0.85);
+    min-height: 20vh;
+}
+
 .slider .indicators .indicator-item {
-    background-color: var(--bg);
+    background-color: var(--dark);
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  }
-  .slider .indicators .indicator-item.active {
-    background-color: var(--dark);
-  }
+}
 
-a.btn{
+.slider .indicators .indicator-item.active {
+    background-color: var(--bg);
+}
+
+.carousel .indicators .indicator-item {
+    background-color: var(--dark);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.carousel .indicators .indicator-item.active {
+    background-color: var(--bg);
+}
+
+a.btn {
     appearance: none;
     background-color: var(--bg);
     color: var(--dark);
     border-radius: .40rem;
 }
 
-a.btn:hover{
+a.btn:hover {
     background-color: var(--dark);
     color: var(--txt-hvr);
 }
@@ -101,7 +146,7 @@ a.btn:hover{
     color: var(--txt);
 }
 
-.card-panel.hoverable{
+.card-panel.hoverable {
     background-color: var(--dark);
     min-height: 15vh;
 }
@@ -113,23 +158,25 @@ a.btn:hover{
     color: var(--txt);
 }
 
-.progress .determinate{
+.progress .determinate {
     background: var(--bg);
 }
 
-span{
-    color:var(--txt);
+span {
+    color: var(--txt);
+    text-align: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--bg);
 }
-p{
-    color:var(--txt);
-}
-@media only screen and (max-width: 992px) {}
 
+p {
+    color: var(--txt);
+}
+
+@media only screen and (max-width: 992px) {}
 
 @media only screen and (max-width: 600px) {
     .myimage {
@@ -140,7 +187,7 @@ p{
         color: var(--txt);
     }
     .aboutme {
-        text-align:left !important;
+        text-align: left !important;
         text-justify: auto !important;
         color: var(--txt);
     }
